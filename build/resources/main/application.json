@@ -1,0 +1,14 @@
+{
+  "vertx.kafka.producer.bootstrap.servers": "localhost:9092",
+  "vertx.kafka.producer.acks": "all",
+  "vertx.kafka.consumer.bootstrap.servers": "localhost:9092",
+  "vertx.kafka.consumer.group.id": "dev-group",
+  "vertx.kafka.consumer.auto.offset.reset": "latest",
+  "vertx.kafka.consumer.enable.auto.commit": true,
+  "vertx.kafka.consumer.auto.commit.interval.ms": 1000,
+  "database": {
+    "db.url": "jdbc:postgresql://192.168.179.128:5432/verticlemessage",
+    "db.user": "postgres",
+    "db.password": "postgres"
+  }
+}

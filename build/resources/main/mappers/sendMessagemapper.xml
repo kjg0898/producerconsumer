@@ -1,0 +1,1888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.dao.SendMessageMapper">
+    <!-- KsmSendService -->
+    <insert id="insertKsmAgv" parameterType="KsmSendService">
+        INSERT INTO KsmAgv( carKey
+                          , accessKey
+                          , createTime
+                          , cmdCode
+                          , infoCode
+                          , errorCode
+                          , checkSum
+                          , bodyLength
+                          , veh_loc_long
+                          , veh_loc_lat
+                          , veh_speed
+                          , gps_azi
+                          , link
+                          , lane
+                          , veh_type
+                          , veh_class
+                          , vin
+                          , writeHandlerId
+                          , msgRcvTime
+                          , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmBasis" parameterType="KsmSendService">
+        INSERT INTO KsmBasis( carKey
+                            , accessKey
+                            , createTime
+                            , cmdCode
+                            , infoCode
+                            , errorCode
+                            , checkSum
+                            , bodyLength
+                            , vin
+                            , writeHandlerId
+                            , msgRcvTime
+                            , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+
+    </insert>
+
+
+
+    <insert id="insertKsmBis_detector" parameterType="KsmSendService">
+        INSERT INTO KsmBis_detector( carKey
+                                   , accessKey
+                                   , createTime
+                                   , cmdCode
+                                   , infoCode
+                                   , errorCode
+                                   , checkSum
+                                   , bodyLength
+                                   , longitude
+                                   , latitude
+                                   , standardLinkID
+                                   , facilityTypeCode
+                                   , facilityMessageCode
+                                   , writeHandlerId
+                                   , msgRcvTime
+                                   , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{longitude,jdbcType=BIGINT},
+                #{latitude,jdbcType=BIGINT},
+                #{standardLinkID,jdbcType=VARCHAR},
+                #{facilityTypeCode,jdbcType=INTEGER},
+                #{facilityMessageCode,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+
+    </insert>
+
+
+
+    <insert id="insertKsmBis_detector2" parameterType="KsmSendService">
+        INSERT INTO KsmBis_detector2( carKey
+                                    , accessKey
+                                    , createTime
+                                    , cmdCode
+                                    , infoCode
+                                    , errorCode
+                                    , checkSum
+                                    , bodyLength
+                                    , longitude
+                                    , latitude
+                                    , standardLinkID
+                                    , facilityTypeCode
+                                    , facilityMessageCode
+                                    , writeHandlerId
+                                    , msgRcvTime
+                                    , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{longitude,jdbcType=BIGINT},
+                #{latitude,jdbcType=BIGINT},
+                #{standardLinkID,jdbcType=VARCHAR},
+                #{facilityTypeCode,jdbcType=INTEGER},
+                #{facilityMessageCode,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_event1" parameterType="KsmSendService">
+        INSERT INTO KsmBis_event1( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_event2" parameterType="KsmSendService">
+        INSERT INTO KsmBis_event2( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_event3" parameterType="KsmSendService">
+        INSERT INTO KsmBis_event3( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_event4" parameterType="KsmSendService">
+        INSERT INTO KsmBis_event4( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_event5" parameterType="KsmSendService">
+        INSERT INTO KsmBis_event5( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_event6" parameterType="KsmSendService">
+        INSERT INTO KsmBis_event6( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_event7" parameterType="KsmSendService">
+        INSERT INTO KsmBis_event7( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+
+    <insert id="insertKsmBis_ice" parameterType="KsmSendService">
+        INSERT INTO KsmBis_ice( carKey
+                              , accessKey
+                              , createTime
+                              , cmdCode
+                              , infoCode
+                              , errorCode
+                              , checkSum
+                              , bodyLength
+                              , veh_loc_long
+                              , veh_loc_lat
+                              , veh_speed
+                              , gps_azi
+                              , vin
+                              , brake_sig
+                              , accel_x
+                              , accel_y
+                              , shift_pos
+                              , veh_op_status
+                              , auto_drive_status
+                              , writeHandlerId
+                              , msgRcvTime
+                              , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{vin,jdbcType=INTEGER},
+                #{brake_sig,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{shift_pos,jdbcType=VARCHAR},
+                #{veh_op_status,jdbcType=VARCHAR},
+                #{auto_drive_status,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+
+    </insert>
+
+
+
+    <insert id="insertKsmBis_ice2" parameterType="KsmSendService">
+        INSERT INTO KsmBis_ice2( carKey
+                               , accessKey
+                               , createTime
+                               , cmdCode
+                               , infoCode
+                               , errorCode
+                               , checkSum
+                               , bodyLength
+                               , veh_loc_long
+                               , veh_loc_lat
+                               , veh_speed
+                               , gps_azi
+                               , vin
+                               , brake_sig
+                               , accel_x
+                               , accel_y
+                               , shift_pos
+                               , veh_op_status
+                               , auto_drive_status
+                               , writeHandlerId
+                               , msgRcvTime
+                               , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{vin,jdbcType=INTEGER},
+                #{brake_sig,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{shift_pos,jdbcType=VARCHAR},
+                #{veh_op_status,jdbcType=VARCHAR},
+                #{auto_drive_status,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmBis_ice3" parameterType="KsmSendService">
+        INSERT INTO KsmBis_ice3( carKey
+                               , accessKey
+                               , createTime
+                               , cmdCode
+                               , infoCode
+                               , errorCode
+                               , checkSum
+                               , bodyLength
+                               , veh_loc_long
+                               , veh_loc_lat
+                               , veh_speed
+                               , gps_azi
+                               , vin
+                               , brake_sig
+                               , accel_x
+                               , accel_y
+                               , shift_pos
+                               , veh_op_status
+                               , auto_drive_status
+                               , writeHandlerId
+                               , msgRcvTime
+                               , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{vin,jdbcType=INTEGER},
+                #{brake_sig,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{shift_pos,jdbcType=VARCHAR},
+                #{veh_op_status,jdbcType=VARCHAR},
+                #{auto_drive_status,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmCharge" parameterType="KsmSendService">
+        INSERT INTO KsmCharge( carKey
+                             , accessKey
+                             , createTime
+                             , cmdCode
+                             , infoCode
+                             , errorCode
+                             , checkSum
+                             , bodyLength
+                             , veh_loc_long
+                             , veh_loc_lat
+                             , veh_speed
+                             , gps_azi
+                             , link
+                             , lane
+                             , veh_type
+                             , veh_class
+                             , vin
+                             , writeHandlerId
+                             , msgRcvTime
+                             , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmControl" parameterType="KsmSendService">
+        INSERT INTO KsmControl( carKey
+                              , accessKey
+                              , createTime
+                              , cmdCode
+                              , infoCode
+                              , errorCode
+                              , checkSum
+                              , bodyLength
+                              , vin
+                              , controlCommandCode
+                              , SAedgeID
+                              , vehicleType
+                              , controlType
+                              , destinationPoint
+                              , writeHandlerId
+                              , msgRcvTime
+                              , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{vin,jdbcType=INTEGER},
+                #{controlCommandCode,jdbcType=VARCHAR},
+                #{SAedgeID,jdbcType=VARCHAR},
+                #{vehicleType,jdbcType=VARCHAR},
+                #{controlType,jdbcType=VARCHAR},
+                #{destinationPoint,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+
+    </insert>
+
+
+    <insert id="insertKsmDam" parameterType="KsmSendService">
+        INSERT INTO KsmDam( carKey
+                          , accessKey
+                          , createTime
+                          , cmdCode
+                          , infoCode
+                          , errorCode
+                          , checkSum
+                          , bodyLength
+                          , veh_loc_long
+                          , veh_loc_lat
+                          , veh_speed
+                          , gps_azi
+                          , link
+                          , lane
+                          , veh_type
+                          , veh_class
+                          , vin
+                          , writeHandlerId
+                          , msgRcvTime
+                          , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+
+    </insert>
+
+
+    <insert id="insertKsmDetector" parameterType="KsmSendService">
+        INSERT INTO KsmDetector( carKey
+                               , accessKey
+                               , createTime
+                               , cmdCode
+                               , infoCode
+                               , errorCode
+                               , checkSum
+                               , bodyLength
+                               , longitude
+                               , latitude
+                               , standardLinkID
+                               , facilityTypeCode
+                               , facilityMessageCode
+                               , writeHandlerId
+                               , msgRcvTime
+                               , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{longitude,jdbcType=BIGINT},
+                #{latitude,jdbcType=BIGINT},
+                #{standardLinkID,jdbcType=VARCHAR},
+                #{facilityTypeCode,jdbcType=INTEGER},
+                #{facilityMessageCode,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmEvent" parameterType="KsmSendService">
+        INSERT INTO KsmEvent( carKey
+                            , accessKey
+                            , createTime
+                            , cmdCode
+                            , infoCode
+                            , errorCode
+                            , checkSum
+                            , bodyLength
+                            , veh_loc_long
+                            , veh_loc_lat
+                            , veh_speed
+                            , gps_azi
+                            , link
+                            , lane
+                            , veh_type
+                            , veh_class
+                            , vin
+                            , writeHandlerId
+                            , msgRcvTime
+                            , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="insertKsmI2x" parameterType="KsmSendService">
+        INSERT INTO KsmI2x(
+        )
+    </insert>
+
+
+    <insert id="insertKsmIce" parameterType="KsmSendService">
+        INSERT INTO KsmIce( carKey
+                          , accessKey
+                          , createTime
+                          , cmdCode
+                          , infoCode
+                          , errorCode
+                          , checkSum
+                          , bodyLength
+                          , veh_loc_long
+                          , veh_loc_lat
+                          , veh_speed
+                          , gps_azi
+                          , link
+                          , lane
+                          , veh_type
+                          , veh_class
+                          , vin
+                          , accel_x
+                          , accel_y
+                          , writeHandlerId
+                          , msgRcvTime
+                          , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmIce1" parameterType="KsmSendService">
+        INSERT INTO KsmIce1( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , accel_x
+                           , accel_y
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmIce2" parameterType="KsmSendService">
+        INSERT INTO KsmIce2( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , accel_x
+                           , accel_y
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmIce3" parameterType="KsmSendService">
+        INSERT INTO KsmIce3( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , accel_x
+                           , accel_y
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmIce4" parameterType="KsmSendService">
+        INSERT INTO KsmIce4( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , accel_x
+                           , accel_y
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmLdmIce10" parameterType="KsmSendService">
+        INSERT INTO KsmLdmIce10( carKey
+                               , accessKey
+                               , createTime
+                               , cmdCode
+                               , infoCode
+                               , errorCode
+                               , checkSum
+                               , bodyLength
+                               , veh_loc_long
+                               , veh_loc_lat
+                               , veh_speed
+                               , gps_azi
+                               , link
+                               , lane
+                               , veh_type
+                               , veh_class
+                               , vin
+                               , accel_x
+                               , accel_y
+                               , shift_pos
+                               , writeHandlerId
+                               , msgRcvTime
+                               , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{shift_pos,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmNavy_auto_ice" parameterType="KsmSendService">
+        INSERT INTO KsmNavy_auto_ice( carKey
+                                    , accessKey
+                                    , createTime
+                                    , cmdCode
+                                    , infoCode
+                                    , errorCode
+                                    , checkSum
+                                    , bodyLength
+                                    , veh_loc_long
+                                    , veh_loc_lat
+                                    , veh_speed
+                                    , gps_azi
+                                    , veh_type
+                                    , veh_class
+                                    , vin
+                                    , brake_sig
+                                    , accel_x
+                                    , accel_y
+                                    , shift_pos
+                                    , veh_op_status
+                                    , auto_drive_status
+                                    , lane_keep_mode
+                                    , path_objs_present
+                                    , path_obj_dist
+                                    , path_obj_rel_speed
+                                    , cut_in_dec
+                                    , deflect_drive_state
+                                    , speed_lim
+                                    , turn_sig_status
+                                    , req_accel_control
+                                    , req_steering_angle
+                                    , third_ord_fit_coeffs
+                                    , front_lidar_stat
+                                    , left_lidar_stat
+                                    , right_lidar_stat
+                                    , rear_lidar_stat
+                                    , front_cam_stat
+                                    , left_cam_stat
+                                    , right_front_cam_stat
+                                    , left_rear_cam_stat
+                                    , right_rear_cam_stat
+                                    , front_radar_stat
+                                    , gps_stat
+                                    , lcu_stat
+                                    , turn_sig_control_mode
+                                    , dest_route_type
+                                    , dest_lat
+                                    , dest_long
+                                    , dest_dist
+                                    , dest_arrival_time
+                                    , writeHandlerId
+                                    , msgRcvTime
+                                    , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{brake_sig,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{shift_pos,jdbcType=VARCHAR},
+                #{veh_op_status,jdbcType=VARCHAR},
+                #{auto_drive_status,jdbcType=VARCHAR},
+                #{lane_keep_mode,jdbcType=VARCHAR},
+                #{path_objs_present,jdbcType=VARCHAR},
+                #{path_obj_dist,jdbcType=VARCHAR},
+                #{path_obj_rel_speed,jdbcType=VARCHAR},
+                #{cut_in_dec,jdbcType=VARCHAR},
+                #{deflect_drive_state,jdbcType=VARCHAR},
+                #{speed_lim,jdbcType=VARCHAR},
+                #{turn_sig_status,jdbcType=VARCHAR},
+                #{req_accel_control,jdbcType=VARCHAR},
+                #{req_steering_angle,jdbcType=VARCHAR},
+                #{third_ord_fit_coeffs,jdbcType=VARCHAR},
+                #{front_lidar_stat,jdbcType=VARCHAR},
+                #{left_lidar_stat,jdbcType=VARCHAR},
+                #{right_lidar_stat,jdbcType=VARCHAR},
+                #{rear_lidar_stat,jdbcType=VARCHAR},
+                #{front_cam_stat,jdbcType=VARCHAR},
+                #{left_cam_stat,jdbcType=VARCHAR},
+                #{right_front_cam_stat,jdbcType=VARCHAR},
+                #{left_rear_cam_stat,jdbcType=VARCHAR},
+                #{right_rear_cam_stat,jdbcType=VARCHAR},
+                #{front_radar_stat,jdbcType=VARCHAR},
+                #{gps_stat,jdbcType=VARCHAR},
+                #{lcu_stat,jdbcType=VARCHAR},
+                #{turn_sig_control_mode,jdbcType=VARCHAR},
+                #{dest_route_type,jdbcType=VARCHAR},
+                #{dest_lat,jdbcType=BIGINT},
+                #{dest_long,jdbcType=BIGINT},
+                #{dest_dist,jdbcType=INTEGER},
+                #{dest_arrival_time,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmNavy_control" parameterType="KsmSendService">
+        INSERT INTO KsmNavy_control( carKey
+                                   , accessKey
+                                   , createTime
+                                   , cmdCode
+                                   , infoCode
+                                   , errorCode
+                                   , checkSum
+                                   , bodyLength
+                                   , vin
+                                   , vehicleType
+                                   , controlType
+                                   , writeHandlerId
+                                   , msgRcvTime
+                                   , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{vin,jdbcType=INTEGER},
+                #{vehicleType,jdbcType=VARCHAR},
+                #{controlType,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+
+    </insert>
+
+
+    <insert id="insertKsmNavy_detector" parameterType="KsmSendService">
+        INSERT INTO KsmNavy_detector( carKey
+                                    , accessKey
+                                    , createTime
+                                    , cmdCode
+                                    , infoCode
+                                    , errorCode
+                                    , checkSum
+                                    , bodyLength
+                                    , longitude
+                                    , latitude
+                                    , standardLinkID
+                                    , facilityTypeCode
+                                    , facilityMessageCode
+                                    , detectType
+                                    , detectImg_Length
+                                    , detectImg
+                                    , HW
+                                    , SW
+                                    , writeHandlerId
+                                    , msgRcvTime
+                                    , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{longitude,jdbcType=BIGINT},
+                #{latitude,jdbcType=BIGINT},
+                #{standardLinkID,jdbcType=VARCHAR},
+                #{facilityTypeCode,jdbcType=INTEGER},
+                #{facilityMessageCode,jdbcType=VARCHAR},
+                #{detectType,jdbcType=BIGINT},
+                #{detectImg_Length,jdbcType=BINARY},
+                #{detectImg,jdbcType=INTEGER},
+                #{HW,jdbcType=VARCHAR},
+                #{SW,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmNavy_detector2" parameterType="KsmSendService">
+        INSERT INTO KsmNavy_detector2( carKey
+                                     , accessKey
+                                     , createTime
+                                     , cmdCode
+                                     , infoCode
+                                     , errorCode
+                                     , checkSum
+                                     , bodyLength
+                                     , longitude
+                                     , latitude
+                                     , standardLinkID
+                                     , facilityTypeCode
+                                     , facilityMessageCode
+                                     , detectType
+                                     , detectImg_Length
+                                     , detectImg
+                                     , HW
+                                     , SW
+                                     , writeHandlerId
+                                     , msgRcvTime
+                                     , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{longitude,jdbcType=BIGINT},
+                #{latitude,jdbcType=BIGINT},
+                #{standardLinkID,jdbcType=VARCHAR},
+                #{facilityTypeCode,jdbcType=INTEGER},
+                #{facilityMessageCode,jdbcType=VARCHAR},
+                #{detectType,jdbcType=BIGINT},
+                #{detectImg_Length,jdbcType=BINARY},
+                #{detectImg,jdbcType=INTEGER},
+                #{HW,jdbcType=VARCHAR},
+                #{SW,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="insertKsmNavy_event" parameterType="KsmSendService">
+        INSERT INTO KsmNavy_event( carKey
+                                 , accessKey
+                                 , createTime
+                                 , cmdCode
+                                 , infoCode
+                                 , errorCode
+                                 , checkSum
+                                 , bodyLength
+                                 , veh_loc_long
+                                 , veh_loc_lat
+                                 , veh_speed
+                                 , gps_azi
+                                 , veh_type
+                                 , veh_class
+                                 , vin
+                                 , event_type
+                                 , route_info
+                                 , operation_date
+                                 , point_sequence
+                                 , point_id
+                                 , writeHandlerId
+                                 , msgRcvTime
+                                 , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{event_type,jdbcType=VARCHAR},
+                #{route_info,jdbcType=VARCHAR},
+                #{operation_date,jdbcType=VARCHAR},
+                #{point_sequence,jdbcType=VARCHAR},
+                #{point_id,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmNavy_mexus_ice" parameterType="KsmSendService">
+        INSERT INTO KsmNavy_mexus_ice( carKey
+                                     , accessKey
+                                     , createTime
+                                     , cmdCode
+                                     , infoCode
+                                     , errorCode
+                                     , checkSum
+                                     , bodyLength
+                                     , veh_loc_long
+                                     , veh_loc_lat
+                                     , veh_speed
+                                     , gps_azi
+                                     , veh_type
+                                     , veh_class
+                                     , vin
+                                     , writeHandlerId
+                                     , msgRcvTime
+                                     , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmPev1" parameterType="KsmSendService">
+        INSERT INTO KsmPev1( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmPev2" parameterType="KsmSendService">
+        INSERT INTO KsmPev2( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmPev3" parameterType="KsmSendService">
+        INSERT INTO KsmPev3( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmPev4" parameterType="KsmSendService">
+        INSERT INTO KsmPev4( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmPev" parameterType="KsmSendService">
+        INSERT INTO KsmPev( carKey
+                          , accessKey
+                          , createTime
+                          , cmdCode
+                          , infoCode
+                          , errorCode
+                          , checkSum
+                          , bodyLength
+                          , veh_loc_long
+                          , veh_loc_lat
+                          , veh_speed
+                          , gps_azi
+                          , link
+                          , lane
+                          , veh_type
+                          , veh_class
+                          , vin
+                          , writeHandlerId
+                          , msgRcvTime
+                          , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmResult1" parameterType="KsmSendService">
+        INSERT INTO KsmResult1(
+        )
+    </insert>
+
+
+    <insert id="insertKsmRsa" parameterType="KsmSendService">
+        INSERT INTO KsmRsa(
+        )
+    </insert>
+
+
+    <insert id="insertKsmSaim" parameterType="KsmSendService">
+        INSERT INTO KsmSaim( carKey
+                           , accessKey
+                           , createTime
+                           , cmdCode
+                           , infoCode
+                           , errorCode
+                           , checkSum
+                           , bodyLength
+                           , veh_loc_long
+                           , veh_loc_lat
+                           , veh_speed
+                           , gps_azi
+                           , link
+                           , lane
+                           , veh_type
+                           , veh_class
+                           , vin
+                           , writeHandlerId
+                           , msgRcvTime
+                           , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{link,jdbcType=VARCHAR},
+                #{lane,jdbcType=VARCHAR},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmSaom" parameterType="KsmSendService">
+        INSERT INTO KsmSaom(
+        )
+    </insert>
+
+
+    <insert id="insertKsmSensor" parameterType="KsmSendService">
+        INSERT INTO KsmSensor( carKey
+                             , accessKey
+                             , createTime
+                             , cmdCode
+                             , infoCode
+                             , errorCode
+                             , checkSum
+                             , bodyLength
+                             , longitude
+                             , latitude
+                             , standardLinkID
+                             , facilityTypeCode
+                             , facilityMessageCode
+                             , writeHandlerId
+                             , msgRcvTime
+                             , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{longitude,jdbcType=BIGINT},
+                #{latitude,jdbcType=BIGINT},
+                #{standardLinkID,jdbcType=VARCHAR},
+                #{facilityTypeCode,jdbcType=INTEGER},
+                #{facilityMessageCode,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmTest_ice" parameterType="KsmSendService">
+        INSERT INTO KsmTest_ice (carKey,
+                                 accessKey,
+                                 createTime,
+                                 cmdCode,
+                                 infoCode,
+                                 errorCode,
+                                 checkSum,
+                                 bodyLength,
+                                 veh_loc_long,
+                                 veh_loc_lat,
+                                 veh_speed,
+                                 gps_azi,
+                                 veh_type,
+                                 veh_class,
+                                 vin,
+                                 brake_sig,
+                                 accel_x,
+                                 accel_y,
+                                 shift_pos,
+                                 veh_op_status,
+                                 auto_drive_status,
+                                 lane_keep_mode,
+                                 path_objs_present,
+                                 path_obj_dist,
+                                 path_obj_rel_speed,
+                                 cut_in_dec,
+                                 deflect_drive_state,
+                                 speed_lim,
+                                 turn_sig_status,
+                                 req_accel_control,
+                                 req_steering_angle,
+                                 third_ord_fit_coeffs,
+                                 front_lidar_stat,
+                                 left_lidar_stat,
+                                 right_lidar_stat,
+                                 rear_lidar_stat,
+                                 front_cam_stat,
+                                 left_cam_stat,
+                                 right_front_cam_stat,
+                                 left_rear_cam_stat,
+                                 right_rear_cam_stat,
+                                 front_radar_stat,
+                                 gps_stat,
+                                 lcu_stat,
+                                 turn_sig_control_mode,
+                                 dest_route_type,
+                                 dest_lat,
+                                 dest_long,
+                                 dest_dist,
+                                 dest_arrival_time,
+                                 writeHandlerID,
+                                 msgRcvTime,
+                                 edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{veh_loc_long,jdbcType=BIGINT},
+                #{veh_loc_lat,jdbcType=BIGINT},
+                #{veh_speed,jdbcType=INTEGER},
+                #{gps_azi,jdbcType=INTEGER},
+                #{veh_type,jdbcType=VARCHAR},
+                #{veh_class,jdbcType=VARCHAR},
+                #{vin,jdbcType=INTEGER},
+                #{brake_sig,jdbcType=INTEGER},
+                #{accel_x,jdbcType=BIGINT},
+                #{accel_y,jdbcType=BIGINT},
+                #{shift_pos,jdbcType=VARCHAR},
+                #{veh_op_status,jdbcType=VARCHAR},
+                #{auto_drive_status,jdbcType=VARCHAR},
+                #{lane_keep_mode,jdbcType=VARCHAR},
+                #{path_objs_present,jdbcType=VARCHAR},
+                #{path_obj_dist,jdbcType=VARCHAR},
+                #{path_obj_rel_speed,jdbcType=VARCHAR},
+                #{cut_in_dec,jdbcType=VARCHAR},
+                #{deflect_drive_state,jdbcType=VARCHAR},
+                #{speed_lim,jdbcType=VARCHAR},
+                #{turn_sig_status,jdbcType=VARCHAR},
+                #{req_accel_control,jdbcType=VARCHAR},
+                #{req_steering_angle,jdbcType=VARCHAR},
+                #{third_ord_fit_coeffs,jdbcType=VARCHAR},
+                #{front_lidar_stat,jdbcType=VARCHAR},
+                #{left_lidar_stat,jdbcType=VARCHAR},
+                #{right_lidar_stat,jdbcType=VARCHAR},
+                #{rear_lidar_stat,jdbcType=VARCHAR},
+                #{front_cam_stat,jdbcType=VARCHAR},
+                #{left_cam_stat,jdbcType=VARCHAR},
+                #{right_front_cam_stat,jdbcType=VARCHAR},
+                #{left_rear_cam_stat,jdbcType=VARCHAR},
+                #{right_rear_cam_stat,jdbcType=VARCHAR},
+                #{front_radar_stat,jdbcType=VARCHAR},
+                #{gps_stat,jdbcType=VARCHAR},
+                #{lcu_stat,jdbcType=VARCHAR},
+                #{turn_sig_control_mode,jdbcType=VARCHAR},
+                #{dest_route_type,jdbcType=VARCHAR},
+                #{dest_lat,jdbcType=BIGINT},
+                #{dest_long,jdbcType=BIGINT},
+                #{dest_dist,jdbcType=INTEGER},
+                #{dest_arrival_time,jdbcType=INTEGER},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="insertKsmTraffic" parameterType="KsmSendService">
+        INSERT INTO KsmTraffic( carKey
+                              , accessKey
+                              , createTime
+                              , cmdCode
+                              , infoCode
+                              , errorCode
+                              , checkSum
+                              , bodyLength
+                              , longitude
+                              , latitude
+                              , standardLinkID
+                              , facilityTypeCode
+                              , facilityMessageCode
+                              , writeHandlerId
+                              , msgRcvTime
+                              , edgeId)
+        VALUES (#{carKey,jdbcType=VARCHAR},
+                #{accessKey,jdbcType=VARCHAR},
+                #{createTime,jdbcType=VARCHAR},
+                #{cmdCode,jdbcType=INTEGER},
+                #{infoCode,jdbcType=INTEGER},
+                #{errorCode,jdbcType=INTEGER},
+                #{checkSum,jdbcType=BIGINT},
+                #{bodyLength,jdbcType=BIGINT},
+                #{longitude,jdbcType=BIGINT},
+                #{latitude,jdbcType=BIGINT},
+                #{standardLinkID,jdbcType=VARCHAR},
+                #{facilityTypeCode,jdbcType=INTEGER},
+                #{facilityMessageCode,jdbcType=VARCHAR},
+                #{writehandlerid,jdbcType=VARCHAR},
+                #{msgrcvtime,jdbcType=VARCHAR},
+                #{edgeid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <!--ProtocolBufferService-->
+    <insert id="insertProtoBFSendMessage" parameterType="ProtocolBufferService">
+
+        INSERT INTO ProtocolBufferSendMessage (carKey)
+        VALUES (#{carKey,jdbcType=VARCHAR})
+
+    </insert>
+
+</mapper>
